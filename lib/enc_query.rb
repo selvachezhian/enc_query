@@ -2,5 +2,5 @@ require "enc_query/version"
 
 module EncQuery
   class Error < StandardError; end
-  # Your code goes here...
+  ActiveRecord::Base.extend(EncQuery::ClassMethods) if defined?(ActiveRecord)
 end
